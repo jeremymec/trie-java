@@ -20,6 +20,10 @@ public class Node {
         this.children.add(n);
     }
 
+    public ArrayList<Node> getChildren(){
+        return this.children;
+    }
+
     public Node findChild(char target){
         for (Node n : this.children){
             if (n.value == target){
@@ -27,6 +31,10 @@ public class Node {
             }
         }
         return null;
+    }
+
+    public void setEndpoint(boolean endpoint){
+        this.endpoint = endpoint;
     }
 
 }
